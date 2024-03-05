@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import ComboBox from './components/ComboBox';
+import CountrySelect from './components/CountrySelect';
+import MyHeader from './components/header/Cabecera';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button variant='outlined'>
+        Soy un botón
+      </Button>
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+      <Button variant="outlined" startIcon={<DeleteIcon />}>       
+        Delete
+      </Button>
+      <Button variant="contained" endIcon={<SendIcon />}>
+        Send
+      </Button>
+      <ComboBox />
+      <CountrySelect/>
+      <MyHeader />
+
     </div>
   );
 }
